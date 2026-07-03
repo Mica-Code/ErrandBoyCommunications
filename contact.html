@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contact Us — Errandboy Communications</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Get in touch with Errandboy Communications in Ago-Okota, Lagos. Chat on WhatsApp, call, email, or send a message directly.">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav id="mainNav" class="navbar">
+    <div class="container">
+        <a href="index.html" class="brand">
+            <img src="img/logo-transparent.png" alt="Errandboy Communications" class="brand-logo">
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="catalog.html">Catalogue</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <a href="#" data-wa-generic target="_blank" rel="noopener" class="btn btn-brand desktop-only"><i class="bi bi-whatsapp"></i> Chat Now</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu"><i class="bi bi-list"></i></button>
+        </div>
+    </div>
+</nav>
+
+<div class="backdrop-veil" id="backdropVeil"></div>
+<div class="mobile-panel" id="mobilePanel">
+    <div class="mobile-panel-head">
+        <div class="brand"><img src="img/logo-transparent.png" alt="Errandboy Communications" class="brand-logo"></div>
+        <button id="panelClose" class="nav-toggle" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="catalog.html">Catalogue</a>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+    <a class="btn btn-whatsapp btn-block" style="margin-top:26px" data-wa-generic target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Chat on WhatsApp</a>
+</div>
+
+<header class="page-hero">
+    <div class="container">
+        <div class="eyebrow"><i class="bi bi-headset"></i> We're Here to Help</div>
+        <h1>Let's find your <span class="text-grad">next phone</span> together.</h1>
+        <p>Whether you have a question about a listing or want to make an inquiry, reach us on WhatsApp for the fastest response, or use the form below.</p>
+    </div>
+</header>
+
+<section class="section" style="padding-top:20px">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="reveal">
+                <div class="info-card">
+                    <div class="icon"><i class="bi bi-geo-alt-fill"></i></div>
+                    <div>
+                        <h5>Visit Us</h5>
+                        <p>25 Lateef Adegboyega Street, Ago-Okota, Lagos State</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="icon"><i class="bi bi-whatsapp"></i></div>
+                    <div>
+                        <h5>WhatsApp &amp; Phone</h5>
+                        <a href="#" data-wa-generic target="_blank" rel="noopener">0813 353 2138</a>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="icon"><i class="bi bi-envelope-fill"></i></div>
+                    <div>
+                        <h5>Email</h5>
+                        <a href="mailto:errandboyliaisonservices@gmail.com">errandboyliaisonservices@gmail.com</a>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="icon"><i class="bi bi-clock-fill"></i></div>
+                    <div>
+                        <h5>Working Hours</h5>
+                        <p>Mon – Sat: 9:00 AM – 7:00 PM</p>
+                    </div>
+                </div>
+                <div class="map-frame">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.1494458260872!2d3.3076612748186625!3d6.502758093489496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8ec297349e15%3A0xeedc809272d88f10!2s25%20Lateef%20Adegboyega%20St%2C%20Ilasamaja%2C%20Lagos%20102214%2C%20Lagos!5e0!3m2!1sen!2sng!4v1756254193493!5m2!1sen!2sng" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="reveal">
+                <div class="form-card">
+                    <h3 style="margin-bottom:8px">Send us a message</h3>
+                    <p style="color:var(--muted);font-size:.92rem;margin-bottom:26px">Fill in your details and we'll open a pre-filled WhatsApp chat so we can respond as fast as possible.</p>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input class="form-control" type="text" id="name" name="name" placeholder="e.g. Ada Nwosu" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input class="form-control" type="tel" id="phone" name="phone" placeholder="e.g. 0803 000 0000" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">What are you looking for?</label>
+                            <textarea class="form-control" id="message" name="message" placeholder="e.g. I'm interested in an iPhone 13, 128GB, in good condition." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-whatsapp btn-block"><i class="bi bi-whatsapp"></i> Send via WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="brand"><img src="img/logo-transparent.png" style="max-width: 40%;" alt="Errandboy Communications" class="brand-logo"></div>
+                <p>Your trusted source for clean, thoroughly tested UK &amp; US used phones — delivered with honesty and real after-sales support.</p>
+                <div class="social-row">
+                    <a href="#" data-wa-generic target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                    <a href="mailto:errandboyliaisonservices@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                </div>
+            </div>
+            <div>
+                <h5>Quick Links</h5>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="catalog.html">Catalogue</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div>
+                <h5>Get In Touch</h5>
+                <ul class="footer-contact">
+                    <li><i class="bi bi-geo-alt-fill"></i><span>25 Lateef Adegboyega Street, Ago-Okota, Lagos State</span></li>
+                    <li><i class="bi bi-whatsapp"></i><span>0813 353 2138</span></li>
+                    <li><i class="bi bi-envelope-fill"></i><span>errandboyliaisonservices@gmail.com</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year"></span> Errandboy Communications. All Rights Reserved.</span>
+            <span>Designed by <a href="https://ukatuikechukwu.com.ng" target="_blank" rel="noopener">Ukatu Michael</a></span>
+        </div>
+    </div>
+</footer>
+
+<a class="wa-float" href="#" data-wa-generic target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></a>
+<div class="pm-overlay" id="productModal"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
