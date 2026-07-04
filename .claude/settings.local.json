@@ -5,7 +5,9 @@
       "Bash(powershell -Command \"\\(Get-Content index.html -Raw\\) -replace 'logo-transparent.png','logo-brown.png' | Set-Content -NoNewline index.html\")",
       "Bash(powershell -Command \"\\(Get-Content catalog.html -Raw\\) -replace 'logo-transparent.png','logo-brown.png' | Set-Content -NoNewline catalog.html\")",
       "Bash(powershell -Command \"\\(Get-Content about.html -Raw\\) -replace 'logo-transparent.png','logo-brown.png' | Set-Content -NoNewline about.html\")",
-      "Bash(powershell -Command \"\\(Get-Content contact.html -Raw\\) -replace 'logo-transparent.png','logo-brown.png' | Set-Content -NoNewline contact.html\")"
+      "Bash(powershell -Command \"\\(Get-Content contact.html -Raw\\) -replace 'logo-transparent.png','logo-brown.png' | Set-Content -NoNewline contact.html\")",
+      "WebSearch",
+      "WebFetch(domain:www.pexels.com)"
     ]
   }
 }

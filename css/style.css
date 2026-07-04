@@ -343,7 +343,7 @@ img { max-width: 100%; display: block; }
 /* ==========================================================================
    Category cards
    ========================================================================== */
-.cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .cat-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -366,7 +366,8 @@ img { max-width: 100%; display: block; }
 .cat-card .cat-link i { transition: transform .25s ease; }
 .cat-card:hover .cat-link i { transform: translateX(4px); }
 
-@media (max-width: 860px) { .cat-grid { grid-template-columns: 1fr; } }
+@media (max-width: 1080px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .cat-grid { grid-template-columns: 1fr; } }
 
 /* ==========================================================================
    Product cards
@@ -487,6 +488,8 @@ img { max-width: 100%; display: block; }
     outline: none;
 }
 .sort-select option { background: #fff; color: var(--text); }
+select.form-control { cursor: pointer; }
+select.form-control option { background: #fff; color: var(--text); }
 
 .results-meta { color: var(--muted); font-size: 0.88rem; margin-bottom: 22px; }
 .empty-state { text-align: center; padding: 70px 20px; color: var(--muted); }
@@ -626,6 +629,7 @@ img { max-width: 100%; display: block; }
 .map-frame iframe { width: 100%; height: 260px; border: 0; filter: grayscale(0.2) sepia(0.12) contrast(1.02); }
 
 .form-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px; }
+#contactFormSection { scroll-margin-top: 110px; }
 .form-group { margin-bottom: 20px; }
 .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--muted); margin-bottom: 8px; }
 .form-control {

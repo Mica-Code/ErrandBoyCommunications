@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -sL -A \"Mozilla/5.0\" -o test.jpg \"https://images.pexels.com/photos/21008947/pexels-photo-21008947.jpeg\" -w \"HTTP:%{http_code} SIZE:%{size_download}\\\\n\")",
+      "Bash(curl -v --max-time 10 https://www.google.com)",
+      "Bash(ping -n 2 8.8.8.8)"
+    ]
+  }
+}

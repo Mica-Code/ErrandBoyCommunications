@@ -18,82 +18,106 @@ function waLink(message) {
 /* ---------------- Product catalogue ---------------- */
 const PRODUCTS = [
     {
-        id: "iphone-5s", brand: "Apple", name: "iPhone 5s", category: "budget",
-        storage: "16GB", grade: "Grade B", origin: "US Used", price: 65000,
-        img: "img/phones/iphone-5s.jpg",
-        desc: "A reliable entry-level classic — great as a first smartphone or backup device. Fully functional, screen and body show light wear consistent with age."
-    },
-    {
-        id: "iphone-6s", brand: "Apple", name: "iPhone 6s", category: "budget",
-        storage: "32GB", grade: "Grade B+", origin: "US Used", price: 85000,
-        img: "img/phones/iphone-6s.jpg",
-        desc: "Compact, snappy and dependable. Battery health tested, minor cosmetic marks, fully unlocked for any network."
-    },
-    {
-        id: "galaxy-note5", brand: "Samsung", name: "Galaxy Note 5", category: "budget",
-        storage: "32GB", grade: "Grade B", origin: "US Used", price: 95000,
-        img: "img/phones/galaxy-note5.jpg",
-        desc: "Big-screen legacy flagship with S Pen included. Solid choice for calls, browsing and social media on a budget."
-    },
-    {
         id: "iphone-x", brand: "Apple", name: "iPhone X", category: "iphone",
-        storage: "64GB", grade: "Grade B+", origin: "US Used", price: 185000,
+        storage: "64GB", grade: "Grade B", origin: "US Used", price: 170000,
         img: "img/phones/iphone-x.jpg",
         desc: "The one that started Face ID. Edge-to-edge display, dual camera, thoroughly tested battery and Face ID module."
     },
     {
-        id: "iphone-12", brand: "Apple", name: "iPhone 12", category: "iphone",
-        storage: "128GB", grade: "Grade A", origin: "US Used", price: 345000,
-        img: "img/phones/iphone-12.jpg",
-        desc: "5G ready with a bright OLED display and tough ceramic shield glass. Clean IMEI, factory unlocked, battery health 85%+."
-    },
-    {
-        id: "samsung-s22", brand: "Samsung", name: "Galaxy S22", category: "samsung",
-        storage: "128GB", grade: "Grade A", origin: "US Used", price: 340000,
-        img: "img/phones/galaxy-s22.jpg",
-        desc: "Compact flagship power with a stunning AMOLED screen and pro-grade cameras. Neat, tested, and ready to go."
+        id: "iphone-11", brand: "Apple", name: "iPhone 11", category: "iphone",
+        storage: "128GB", grade: "Grade B+", origin: "US Used", price: 230000,
+        img: "img/phones/iphone-11.jpg",
+        desc: "A dependable dual-camera classic with all-day battery life. Clean IMEI, factory unlocked, battery health tested."
     },
     {
         id: "iphone-13", brand: "Apple", name: "iPhone 13", category: "iphone",
-        storage: "128GB", grade: "Grade A+", origin: "US Used", price: 395000,
+        storage: "128GB", grade: "Grade A", origin: "US Used", price: 380000,
         img: "img/phones/iphone-13.jpg",
         desc: "Cinematic mode, longer battery life and a gorgeous Super Retina XDR display. Near-flawless cosmetic condition."
     },
     {
-        id: "samsung-s22-ultra", brand: "Samsung", name: "Galaxy S22 Ultra", category: "samsung",
-        storage: "256GB", grade: "Grade A+", origin: "US Used", price: 520000,
+        id: "iphone-14-pro-max", brand: "Apple", name: "iPhone 14 Pro Max", category: "iphone",
+        storage: "256GB", grade: "Grade A", origin: "US Used", price: 620000,
+        img: "img/phones/iphone-14-pro-max.jpg",
+        desc: "The biggest, boldest iPhone display with pro-level cameras and Dynamic Island. Mint condition, verified genuine parts."
+    },
+    {
+        id: "iphone-15-pro-max", brand: "Apple", name: "iPhone 15 Pro Max", category: "iphone",
+        storage: "256GB", grade: "Grade A+", origin: "US Used", price: 850000,
+        img: "img/phones/iphone-15-pro-max.jpg",
+        desc: "Titanium build, A17 Pro chip and a 5x telephoto camera. Near-flawless condition, battery health 90%+."
+    },
+    {
+        id: "iphone-16-pro-max", brand: "Apple", name: "iPhone 16 Pro Max", category: "iphone",
+        storage: "256GB", grade: "Grade A+", origin: "US Used", price: 1150000,
+        img: "img/phones/iphone-16-pro-max.jpg",
+        desc: "Apple's latest flagship — larger display, A18 Pro chip and the most capable iPhone camera system yet."
+    },
+    {
+        id: "galaxy-s20-ultra", brand: "Samsung", name: "Galaxy S20 Ultra", category: "samsung",
+        storage: "128GB", grade: "Grade B+", origin: "US Used", price: 210000,
+        img: "img/phones/galaxy-s20-ultra.jpg",
+        desc: "A 2020 flagship with a massive 6.9-inch display and a 108MP camera. Tested battery and clean IMEI."
+    },
+    {
+        id: "galaxy-note20-ultra", brand: "Samsung", name: "Galaxy Note 20 Ultra", category: "samsung",
+        storage: "256GB", grade: "Grade B+", origin: "US Used", price: 250000,
+        img: "img/phones/galaxy-note20-ultra.jpg",
+        desc: "Built-in S Pen precision on a stunning AMOLED display. Great for productivity, notes and creative work."
+    },
+    {
+        id: "galaxy-s22-ultra", brand: "Samsung", name: "Galaxy S22 Ultra", category: "samsung",
+        storage: "256GB", grade: "Grade A", origin: "US Used", price: 460000,
         img: "img/phones/galaxy-s22-ultra.jpg",
         desc: "Built-in S Pen, 108MP camera and a massive 6.8-inch display. A true productivity and photography powerhouse."
     },
     {
-        id: "samsung-s23-ultra", brand: "Samsung", name: "Galaxy S23 Ultra", category: "samsung",
-        storage: "256GB", grade: "Grade A", origin: "US Used", price: 640000,
-        img: "img/phones/galaxy-s23-ultra.jpg",
-        desc: "Flagship-grade cameras, S Pen precision and all-day battery life in a premium cream finish."
-    },
-    {
-        id: "iphone-14-pro", brand: "Apple", name: "iPhone 14 Pro", category: "iphone",
-        storage: "256GB", grade: "Grade A", origin: "US Used", price: 780000,
-        img: "img/phones/iphone-14-pro.jpg",
-        desc: "Dynamic Island, Always-On display and a 48MP main camera. Immaculate glass, verified genuine parts."
-    },
-    {
-        id: "samsung-s24-ultra", brand: "Samsung", name: "Galaxy S24 Ultra", category: "samsung",
-        storage: "512GB", grade: "Grade A+", origin: "US Used", price: 810000,
+        id: "galaxy-s24-ultra", brand: "Samsung", name: "Galaxy S24 Ultra", category: "samsung",
+        storage: "512GB", grade: "Grade A+", origin: "US Used", price: 780000,
         img: "img/phones/galaxy-s24-ultra.jpg",
         desc: "Titanium frame, AI-powered camera suite and a huge 512GB of storage. Barely-used condition."
     },
     {
-        id: "iphone-14-pro-max", brand: "Apple", name: "iPhone 14 Pro Max", category: "iphone",
-        storage: "256GB", grade: "Grade A+", origin: "US Used", price: 890000,
-        img: "img/phones/iphone-14-pro-max.jpg",
-        desc: "The biggest, boldest iPhone display with pro-level cameras and incredible battery life. Mint condition."
-    },
-    {
-        id: "samsung-s25-ultra", brand: "Samsung", name: "Galaxy S25 Ultra", category: "samsung",
-        storage: "512GB", grade: "Grade A+", origin: "US Used", price: 980000,
+        id: "galaxy-s25-ultra", brand: "Samsung", name: "Galaxy S25 Ultra", category: "samsung",
+        storage: "512GB", grade: "Grade A+", origin: "US Used", price: 960000,
         img: "img/phones/galaxy-s25-ultra.jpg",
         desc: "Samsung's latest and greatest — flagship silicon, next-gen AI camera tools and a jaw-dropping display."
+    },
+    {
+        id: "motorola-edge-plus", brand: "Motorola", name: "Motorola Edge+", category: "other",
+        storage: "256GB", grade: "Grade A", origin: "US Used", price: 300000,
+        img: "img/phones/motorola-edge-plus.jpg",
+        desc: "A curved-display flagship with clean near-stock Android and fast charging. Smooth performance, tested thoroughly."
+    },
+    {
+        id: "xiaomi-13-pro", brand: "Xiaomi", name: "Xiaomi 13 Pro", category: "other",
+        storage: "256GB", grade: "Grade A", origin: "US Used", price: 340000,
+        img: "img/phones/xiaomi-13-pro.jpg",
+        desc: "Leica-tuned cameras and a razor-sharp AMOLED display in a premium glass-and-metal body. Excellent condition."
+    },
+    {
+        id: "pixel-8-pro", brand: "Google", name: "Google Pixel 8 Pro", category: "other",
+        storage: "128GB", grade: "Grade A", origin: "US Used", price: 400000,
+        img: "img/phones/pixel-8-pro.jpg",
+        desc: "Google's cleanest Android experience with a best-in-class computational camera. Verified genuine, battery tested."
+    },
+    {
+        id: "galaxy-a54", brand: "Samsung", name: "Galaxy A54", category: "budget",
+        storage: "128GB", grade: "Grade B+", origin: "US Used", price: 150000,
+        img: "img/phones/galaxy-a54.jpg",
+        desc: "A dependable mid-ranger with a bright AMOLED screen and solid all-day battery. Great value for everyday use."
+    },
+    {
+        id: "moto-g-power", brand: "Motorola", name: "Moto G Power", category: "budget",
+        storage: "128GB", grade: "Grade B", origin: "US Used", price: 95000,
+        img: "img/phones/moto-g-power.jpg",
+        desc: "Known for its huge battery life and clean Android software. A solid, affordable daily driver."
+    },
+    {
+        id: "redmi-note-12-pro", brand: "Xiaomi", name: "Redmi Note 12 Pro", category: "budget",
+        storage: "128GB", grade: "Grade B+", origin: "US Used", price: 120000,
+        img: "img/phones/redmi-note-12-pro.jpg",
+        desc: "A budget powerhouse with a sharp AMOLED display and surprisingly capable cameras. Fully tested and unlocked."
     }
 ];
 
@@ -279,7 +303,7 @@ function initCatalogPage() {
 function initHomeFeatured() {
     const el = document.getElementById("featuredGrid");
     if (!el) return;
-    const featured = PRODUCTS.filter(p => ["iphone-13", "samsung-s22-ultra", "iphone-14-pro", "samsung-s24-ultra", "iphone-14-pro-max", "samsung-s25-ultra"].includes(p.id));
+    const featured = PRODUCTS.filter(p => ["iphone-13", "galaxy-s22-ultra", "iphone-14-pro-max", "galaxy-s24-ultra", "pixel-8-pro", "galaxy-s25-ultra"].includes(p.id));
     renderGrid("featuredGrid", featured);
 }
 
@@ -291,8 +315,9 @@ function initContactForm() {
         e.preventDefault();
         const name = form.name.value.trim();
         const phone = form.phone.value.trim();
+        const budget = form.budget.value;
         const message = form.message.value.trim();
-        const text = `Hi Errandboy Communications, my name is ${name} (${phone}). ${message}`;
+        const text = `Hi Errandboy Communications, my name is ${name} (${phone}). My budget is ${budget}. ${message}`;
         window.open(waLink(text), "_blank");
     });
 }
