@@ -19,25 +19,25 @@ function waLink(message) {
 const PRODUCTS = [
     {
         id: "iphone-5s", brand: "Apple", name: "iPhone 5s", category: "budget",
-        storage: "16GB", grade: "Grade B", origin: "UK Used", price: 65000,
+        storage: "16GB", grade: "Grade B", origin: "US Used", price: 65000,
         img: "img/phones/iphone-5s.jpg",
         desc: "A reliable entry-level classic — great as a first smartphone or backup device. Fully functional, screen and body show light wear consistent with age."
     },
     {
         id: "iphone-6s", brand: "Apple", name: "iPhone 6s", category: "budget",
-        storage: "32GB", grade: "Grade B+", origin: "UK Used", price: 85000,
+        storage: "32GB", grade: "Grade B+", origin: "US Used", price: 85000,
         img: "img/phones/iphone-6s.jpg",
         desc: "Compact, snappy and dependable. Battery health tested, minor cosmetic marks, fully unlocked for any network."
     },
     {
         id: "galaxy-note5", brand: "Samsung", name: "Galaxy Note 5", category: "budget",
-        storage: "32GB", grade: "Grade B", origin: "UK Used", price: 95000,
+        storage: "32GB", grade: "Grade B", origin: "US Used", price: 95000,
         img: "img/phones/galaxy-note5.jpg",
         desc: "Big-screen legacy flagship with S Pen included. Solid choice for calls, browsing and social media on a budget."
     },
     {
         id: "iphone-x", brand: "Apple", name: "iPhone X", category: "iphone",
-        storage: "64GB", grade: "Grade B+", origin: "UK Used", price: 185000,
+        storage: "64GB", grade: "Grade B+", origin: "US Used", price: 185000,
         img: "img/phones/iphone-x.jpg",
         desc: "The one that started Face ID. Edge-to-edge display, dual camera, thoroughly tested battery and Face ID module."
     },
@@ -49,13 +49,13 @@ const PRODUCTS = [
     },
     {
         id: "samsung-s22", brand: "Samsung", name: "Galaxy S22", category: "samsung",
-        storage: "128GB", grade: "Grade A", origin: "UK Used", price: 340000,
+        storage: "128GB", grade: "Grade A", origin: "US Used", price: 340000,
         img: "img/phones/galaxy-s22.jpg",
         desc: "Compact flagship power with a stunning AMOLED screen and pro-grade cameras. Neat, tested, and ready to go."
     },
     {
         id: "iphone-13", brand: "Apple", name: "iPhone 13", category: "iphone",
-        storage: "128GB", grade: "Grade A+", origin: "UK Used", price: 395000,
+        storage: "128GB", grade: "Grade A+", origin: "US Used", price: 395000,
         img: "img/phones/iphone-13.jpg",
         desc: "Cinematic mode, longer battery life and a gorgeous Super Retina XDR display. Near-flawless cosmetic condition."
     },
@@ -67,13 +67,13 @@ const PRODUCTS = [
     },
     {
         id: "samsung-s23-ultra", brand: "Samsung", name: "Galaxy S23 Ultra", category: "samsung",
-        storage: "256GB", grade: "Grade A", origin: "UK Used", price: 640000,
+        storage: "256GB", grade: "Grade A", origin: "US Used", price: 640000,
         img: "img/phones/galaxy-s23-ultra.jpg",
         desc: "Flagship-grade cameras, S Pen precision and all-day battery life in a premium cream finish."
     },
     {
         id: "iphone-14-pro", brand: "Apple", name: "iPhone 14 Pro", category: "iphone",
-        storage: "256GB", grade: "Grade A", origin: "UK Used", price: 780000,
+        storage: "256GB", grade: "Grade A", origin: "US Used", price: 780000,
         img: "img/phones/iphone-14-pro.jpg",
         desc: "Dynamic Island, Always-On display and a 48MP main camera. Immaculate glass, verified genuine parts."
     },
@@ -97,16 +97,12 @@ const PRODUCTS = [
     }
 ];
 
-function formatNaira(n) {
-    return "₦" + n.toLocaleString("en-NG");
-}
-
 function gradeClass(grade) {
     return grade.includes("+") ? "product-tag grade-good" : "product-tag";
 }
 
 function productCardHTML(p) {
-    const msg = `Hi Errandboy Communications, I'm interested in the ${p.name} (${p.storage}, ${p.grade}) listed at ${formatNaira(p.price)} on your website. Is it still available?`;
+    const msg = `Hi Errandboy Communications, I'm interested in the ${p.name} (${p.storage}, ${p.grade}) listed on your website. Please let me know the price and if it's still available.`;
     return `
     <div class="product-card reveal" data-id="${p.id}" data-category="${p.category}" data-price="${p.price}" data-name="${p.name.toLowerCase()}">
         <div class="product-media">
@@ -117,7 +113,7 @@ function productCardHTML(p) {
             <span class="product-brand">${p.brand} &middot; ${p.origin}</span>
             <h3 class="product-name">${p.name}</h3>
             <div class="product-specs"><span>${p.storage}</span><span>${p.origin}</span></div>
-            <div class="product-price">${formatNaira(p.price)}<small>Negotiable on inspection</small></div>
+            <div class="product-price"><i class="bi bi-whatsapp"></i> Chat for Price</div>
             <div class="product-actions">
                 <button class="btn btn-ghost btn-sm details-btn" data-id="${p.id}"><i class="bi bi-eye"></i> Details</button>
                 <a class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener" href="${waLink(msg)}"><i class="bi bi-whatsapp"></i> Chat</a>
@@ -142,7 +138,7 @@ function openProductModal(id) {
     if (!p) return;
     const overlay = document.getElementById("productModal");
     if (!overlay) return;
-    const msg = `Hi Errandboy Communications, I'd like to buy the ${p.name} (${p.storage}, ${p.grade}, ${p.origin}) priced at ${formatNaira(p.price)}. Please confirm availability.`;
+    const msg = `Hi Errandboy Communications, I'd like to buy the ${p.name} (${p.storage}, ${p.grade}, ${p.origin}). Please confirm the price and availability.`;
     overlay.innerHTML = `
         <div class="pm-box">
             <div class="pm-media">
@@ -159,7 +155,7 @@ function openProductModal(id) {
                     <div>Origin<b>${p.origin}</b></div>
                     <div>Warranty<b>7-Day Testing</b></div>
                 </div>
-                <div class="pm-price">${formatNaira(p.price)}</div>
+                <div class="pm-price"><i class="bi bi-whatsapp"></i> Chat for Price</div>
                 <div class="pm-actions">
                     <a class="btn btn-whatsapp btn-block" target="_blank" rel="noopener" href="${waLink(msg)}"><i class="bi bi-whatsapp"></i> Inquire on WhatsApp</a>
                 </div>
