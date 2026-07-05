@@ -7,7 +7,9 @@
       "Bash(powershell -Command \"\\(Get-Content about.html -Raw\\) -replace 'logo-transparent.png','logo-brown.png' | Set-Content -NoNewline about.html\")",
       "Bash(powershell -Command \"\\(Get-Content contact.html -Raw\\) -replace 'logo-transparent.png','logo-brown.png' | Set-Content -NoNewline contact.html\")",
       "WebSearch",
-      "WebFetch(domain:www.pexels.com)"
+      "WebFetch(domain:www.pexels.com)",
+      "Bash(grep -rn \"data-wa-generic\" . --include=\"*.html\" --include=\"*.js\")",
+      "Bash(echo \"exit code: $?\")"
     ]
   }
 }

@@ -331,9 +331,5 @@ document.addEventListener("DOMContentLoaded", () => {
     attachDetailListeners();
     observeReveal();
 
-    document.querySelectorAll("[data-wa-generic]").forEach(a => {
-        a.href = waLink("Hi Errandboy Communications, I'd like to ask about a phone on your website.");
-    });
-
     document.getElementById("year") && (document.getElementById("year").textContent = new Date().getFullYear());
 });
